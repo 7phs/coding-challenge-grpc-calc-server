@@ -1,0 +1,27 @@
+syntax="proto3";
+
+package api;
+
+message Value {
+    uint64 value = 1;
+};
+
+message Values {
+    repeated int64 values = 1;
+};
+
+message Result {
+    int64 value = 1;
+};
+
+message ResultDouble {
+    double value = 1;
+};
+
+service Calc {
+    rpc Add(Values) returns (Result);
+    rpc Sub(Values) returns (Result);
+    rpc Mul(Values) returns (Result);
+    rpc Div(Values) returns (ResultDouble);
+    rpc Fib(Value) returns (Result);
+}

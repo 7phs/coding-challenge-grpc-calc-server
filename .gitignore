@@ -1,0 +1,5 @@
+.idea
+.DS_Store
+bin
+vendor
+coding-challenge-grps-calc-server
